@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="ddb80fd1-f708-4894-9bc8-9ecc1ec5c411" ChangeDateTime="05/10/2019 00:37:12">
+    <Property Name="ElementName" Value="[dbo].[LoggingTable].[Logger]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[LoggingTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Application" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="876a8b0c-ce1b-4d61-974f-d9fd89a8cc83" ChangeDateTime="05/10/2019 00:37:32">
+    <Property Name="ElementName" Value="[dbo].[LoggingTable].[LoggingDate]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[LoggingTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Logged" />
+  </Operation>
+</Operations>
