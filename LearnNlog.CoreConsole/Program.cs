@@ -10,7 +10,7 @@ namespace LearnNlog.CoreConsole
         {
             LoggingSettings.ConsoleLogInit();
             LoggingSettings.WriteLogToFileInit("logfile.txt", LogLevel.Error);
-            LoggingSettings.WriteLogToSqlDatabaseInit("Data Source=localhost;Initial Catalog=Logging;Integrated Security=True;", LogLevel.Error);
+            LoggingSettings.WriteLogToSqlDatabaseInit(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Logging;Integrated Security=True;", LogLevel.Warn);
             WriteLog.Info("HOGE");
             WriteLog.Trace("Fufa");
             WriteLog.Error("ERROR");

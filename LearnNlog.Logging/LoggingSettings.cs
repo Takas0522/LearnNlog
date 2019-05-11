@@ -22,6 +22,8 @@ namespace LearnNlog.Logging
         static LoggingSettings()
         {
             var conf = new LoggingConfiguration();
+            NLog.Common.InternalLogger.LogFile = "internal-log.txt";
+            NLog.Common.InternalLogger.LogLevel = LogLevel.Warn;
             LogManager.Configuration = conf;
 
         }
@@ -56,7 +58,7 @@ namespace LearnNlog.Logging
             dbtarget.ConnectionString = connectionString;
             dbtarget.Name = "dbtarget";
             dbtarget.DBProvider = "System.Data.SqlClient";
-            dbtarget.CommandText = "Inser Into LoggingTable("
+            dbtarget.CommandText = "Insert Into LoggingTable("
                  + "Logged,"
                  + "Application,"
                  + "Level,"
