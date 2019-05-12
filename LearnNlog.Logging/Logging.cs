@@ -9,34 +9,40 @@ namespace LearnNlog.Logging
     {
         private static Logger _logger = LogManager.GetCurrentClassLogger();
 
-        public static void Trace(string message)
+        public static void Trace(string message, string application, string logger)
         {
-            _logger.Trace(message);
+            var logInfo = LoggingFactory.Create(application, LogLevel.Trace, message, logger);
+            _logger.Log(logInfo);
         }
 
-        public static void Debug(string message)
+        public static void Debug(string message, string application, string logger)
         {
-            _logger.Debug(message);
+            var logInfo = LoggingFactory.Create(application, LogLevel.Debug, message, logger);
+            _logger.Log(logInfo);
         }
 
-        public static void Info(string message)
+        public static void Info(string message, string application, string logger)
         {
-            _logger.Info(message);
+            var logInfo = LoggingFactory.Create(application, LogLevel.Info, message, logger);
+            _logger.Log(logInfo);
         }
 
-        public static void Warn(string message)
+        public static void Warn(string message, string application, string logger)
         {
-            _logger.Warn(message);
+            var logInfo = LoggingFactory.Create(application, LogLevel.Warn, message, logger);
+            _logger.Log(logInfo);
         }
 
-        public static void Error(string message)
+        public static void Error(string message, string application, string logger, Exception e)
         {
-            _logger.Error(message);
+            var logInfo = LoggingFactory.Create(application, LogLevel.Error, message, logger, e);
+            _logger.Log(logInfo);
         }
 
-        public static void Fatal(string message)
+        public static void Fatal(string message, string application, string logger, Exception e)
         {
-            _logger.Fatal(message);
+            var logInfo = LoggingFactory.Create(application, LogLevel.Fatal, message, logger, e);
+            _logger.Log(logInfo);
         }
     }
 }

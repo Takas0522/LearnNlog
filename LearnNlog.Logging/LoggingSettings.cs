@@ -17,7 +17,7 @@ namespace LearnNlog.Logging
         // cf. http://m12i.hatenablog.com/entry/2016/11/26/220019
         // cf. http://hkou.hatenablog.com/entry/2016/03/13/194043
         // cf. http://d.hatena.ne.jp/Kazzz/20111105/p1
-        private static readonly string LogLayout = "${longdate}|${event-properties:item=EventId.Id}|${logger}|${uppercase:${level}}|${message} ${exception}";
+        private static readonly string LogLayout = "${longdate}|${event-properties:item=Application}|${logger}|${uppercase:${level}}|${message} ${exception}";
 
         static LoggingSettings()
         {
@@ -104,7 +104,7 @@ namespace LearnNlog.Logging
 
             var actionMethodParam = new DatabaseParameterInfo();
             actionMethodParam.Name = "@actionMethod";
-            actionMethodParam.Layout = "${event-properties:item=actionMethod}";
+            actionMethodParam.Layout = "${event-properties:item=ActionMethod}";
             dbtarget.Parameters.Add(actionMethodParam);
 
             var exceptionParam = new DatabaseParameterInfo();
