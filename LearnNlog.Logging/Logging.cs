@@ -15,15 +15,39 @@ namespace LearnNlog.Logging
             _logger.Log(logInfo);
         }
 
+        public static void Trace(string message, string application, string logger, string action)
+        {
+            var logInfo = LoggingFactory.Create(application, LogLevel.Trace, message, logger, action);
+            _logger.Log(logInfo);
+        }
+
         public static void Debug(string message, string application, string logger)
         {
             var logInfo = LoggingFactory.Create(application, LogLevel.Debug, message, logger);
             _logger.Log(logInfo);
         }
 
+        public static void Debug(string message, string application, string logger, string action)
+        {
+            var logInfo = LoggingFactory.Create(application, LogLevel.Debug, message, logger, action);
+            _logger.Log(logInfo);
+        }
+
         public static void Info(string message, string application, string logger)
         {
             var logInfo = LoggingFactory.Create(application, LogLevel.Info, message, logger);
+            _logger.Log(logInfo);
+        }
+
+        public static void Info(string message, string application, string logger, string action)
+        {
+            var logInfo = LoggingFactory.Create(application, LogLevel.Info, message, logger, action);
+            _logger.Log(logInfo);
+        }
+
+        public static void Warn(string message, string application, string logger, string action)
+        {
+            var logInfo = LoggingFactory.Create(application, LogLevel.Warn, message, logger, action);
             _logger.Log(logInfo);
         }
 

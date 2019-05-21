@@ -1,6 +1,8 @@
 ﻿using System;
+using LearnNlog.CoreConsole.Models;
 using LearnNlog.Logging;
 using NLog;
+using System.Linq;
 
 namespace LearnNlog.CoreConsole
 {
@@ -10,7 +12,7 @@ namespace LearnNlog.CoreConsole
         {
             LoggingSettings.ConsoleLogInit();
             LoggingSettings.WriteLogToFileInit("logfile.txt", LogLevel.Error);
-            LoggingSettings.WriteLogToSqlDatabaseInit(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Logging;Integrated Security=True;", LogLevel.Error);
+            LoggingSettings.WriteLogToSqlDatabaseInit(@"Data Source=localhost;Initial Catalog=Logging;Integrated Security=True;", LogLevel.Error);
             WriteLog.Info("HOGE", "ConsoleApplication", "Main");
             WriteLog.Trace("FUGA", "ConsoleApplication", "Main");
             try
@@ -24,6 +26,11 @@ namespace LearnNlog.CoreConsole
                 WriteLog.Error("FUGA", "ConsoleApplication", "Main", e);
             }
             Console.WriteLine("HelloWorld");
+            using (var db = new LoggingContext())
+            {
+                var d = db.LoggingTable.Select(x => new { x.Id, x.Application });
+                var list = d.ToList();
+            }
         }
     }
 }

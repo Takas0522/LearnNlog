@@ -26,6 +26,14 @@ namespace LearnNlog.Logging
             return info;
         }
 
+        public static LogEventInfo Create(string application, LogLevel logLevel, string message, string logger, string actionMethod, Exception e)
+        {
+            var info = BaseCreate(application, logLevel, message, logger);
+            info.Properties["ActionMethod"] = actionMethod;
+            info.Exception = e;
+            return info;
+        }
+
         private static LogEventInfo BaseCreate(string application, LogLevel logLevel, string message, string logger)
         {
             var info = new LogEventInfo()

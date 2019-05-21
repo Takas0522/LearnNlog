@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.156
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnNlog.Logging", "LearnNlog.Logging\LearnNlog.Logging.csproj", "{80F4B418-18CC-4DFC-8EF9-8F1B578E276D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LearnNlog.Logging", "LearnNlog.Logging\LearnNlog.Logging.csproj", "{80F4B418-18CC-4DFC-8EF9-8F1B578E276D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnNlog.CoreConsole", "LearnNlog.CoreConsole\LearnNlog.CoreConsole.csproj", "{6B3C6A92-4445-450D-AF98-40C80977A854}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LearnNlog.CoreConsole", "LearnNlog.CoreConsole\LearnNlog.CoreConsole.csproj", "{6B3C6A92-4445-450D-AF98-40C80977A854}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "LearnNlog.Database", "LearnNlog.Database\LearnNlog.Database.sqlproj", "{EBE248EE-A3FB-4CF6-BA77-8AB77B1DBD9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnNlog.Api", "LearnNlog.Api\LearnNlog.Api.csproj", "{7B943C8A-5119-44ED-965E-E3588D294085}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +31,10 @@ Global
 		{EBE248EE-A3FB-4CF6-BA77-8AB77B1DBD9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBE248EE-A3FB-4CF6-BA77-8AB77B1DBD9B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EBE248EE-A3FB-4CF6-BA77-8AB77B1DBD9B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{7B943C8A-5119-44ED-965E-E3588D294085}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B943C8A-5119-44ED-965E-E3588D294085}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B943C8A-5119-44ED-965E-E3588D294085}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B943C8A-5119-44ED-965E-E3588D294085}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
